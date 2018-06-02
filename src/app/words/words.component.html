@@ -1,8 +1,10 @@
-<input [(ngModel)]="newEng" placeholder="English"><br/><br/>
-<input [(ngModel)]="newVn" placeholder="Vietnamese">
-<br/><br/>
-<button (click) = "addWord();" >Submit</button>
-
+<div *ngIf="isShowForm">
+	<input [(ngModel)]="newEng" placeholder="English"><br/><br/>
+	<input [(ngModel)]="newVn" placeholder="Vietnamese">
+	<br/><br/>
+	<button (click) = "addWord();" >Add new word</button>
+</div>
+<button (click) = "isShowForm = true" *ngIf="!isShowForm" >Add new word</button>
 
 <div *ngFor = "let word of arrWords" >
   <h4 [ngStyle] = "{ color: word.got ? 'green' : 'red' }">

@@ -9,6 +9,7 @@ export class WordsComponent implements OnInit {
 
   newEng = '';
   newVn = '';
+  isShowForm = false;
 
   arrWords = [
     { id: 1, en: 'Hello', vn: 'Xin Chao', got: true},
@@ -32,6 +33,7 @@ export class WordsComponent implements OnInit {
 
     this.newEng = '';
     this.newVn = '';
+    this.isShowForm = false;
   }
 
 }
