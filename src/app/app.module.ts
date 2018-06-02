@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { FormComponent } from './form/form.component';
 import { StructComponent } from './struct/struct.component';
+import { WordsComponent } from './words/words.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     FormComponent,
-    StructComponent
+    StructComponent,
+    WordsComponent
   ],
   imports: [
     BrowserModule,
