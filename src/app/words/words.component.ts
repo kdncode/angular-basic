@@ -24,13 +24,14 @@ export class WordsComponent implements OnInit {
 
   addWord() {
     this.arrWords.unshift({
-      id : this.arrWords.length + 1,
-      en : this.newEng,
-      vn : this.newVn,
-      got : false
+      id: this.arrWords.length + 1,
+      en: this.newEng,
+      vn: this.newVn,
+      got: false
     });
 
-  this.newEng = '';
-  this.newVn = '';
+    this.newEng = '';
+    this.newVn = '';
   }
+
 }

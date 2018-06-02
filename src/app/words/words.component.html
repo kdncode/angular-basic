@@ -1,7 +1,8 @@
-<input [(ngModel)]="newEng" placeholder="English"><br/>
+<input [(ngModel)]="newEng" placeholder="English"><br/><br/>
 <input [(ngModel)]="newVn" placeholder="Vietnamese">
-<br/>
-<button (click)="addWord();">Submit</button>
+<br/><br/>
+<button (click) = "addWord();" >Submit</button>
+
 
 <div *ngFor = "let word of arrWords" >
   <h4 [ngStyle] = "{ color: word.got ? 'green' : 'red' }">
