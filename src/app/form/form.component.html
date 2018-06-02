@@ -1,0 +1,30 @@
+<input (keyup) = "showName($event)" placeholder="Enter your name...">
+<h2>Your name is: {{ name }}</h2>
+
+<!-- Using 2 way binding. Must import FormsModule to app.module.ts first -->
+<input [(ngModel)] = "age" placeholder="Enter age..."  #txtUserage>
+<h3> Your age is: {{ age }} </h3>
+
+<!-- template reference variable -->
+<code>{{ txtUserage.value | json }}</code><br/><br/><br/>
+
+<!-- Style binding -->
+<input [(ngModel)] = "level" placeholder="New level">
+<!-- <h3 [style.color] = "'blue'"> your color is: {{ color}} </h3><br/><br/> -->
+<h3 [style.color] = "isHighlight ? 'blue' : 'red' ">
+  your level is: {{ level }}
+</h3><br/>
+
+<!-- Class Binding -->
+<div [class] = "isHighlight ? 'circle' : 'square'"></div><br/>
+<div [class.circle] = " !isHighlight" [class.square] = "isHighlight" ></div><br/>
+
+<!-- Attribute Directives -->
+<!-- ngStyle   -->
+<input [(ngModel)] = "level" placeholder="New ngStyle">
+<h3 [ngStyle] = "level.length % 2 === 0 ? evenStyle : oddStyle" >
+  your ngStyle is: {{ level }}
+</h3><br/>
+
+<!-- ngClass  -->
+<div [ngClass] = "currentClass"></div><br/>
