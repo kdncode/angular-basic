@@ -1,3 +1,12 @@
-<p>
+<!-- structural directives  -->
+
+<!-- ngIF -->
+<p *ngIf="isShow">
   struct works!
 </p>
+<button (click) = "isShow = !isShow">Toggle</button>
+
+<!-- ngFor -->
+<li *ngFor=" let subject of myArr ">
+  <p> {{ 'My favorite: ' + subject }} </p>
+</li>

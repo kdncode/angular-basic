@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructComponent implements OnInit {
 
+  isShow = true;
+  myArr = ['Angular', 'React', 'Node', 'Mongo'];
+
   constructor() { }
 
   ngOnInit() {
