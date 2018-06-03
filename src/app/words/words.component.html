@@ -4,6 +4,8 @@
 	<br/><br/>
 	<button (click) = "addWord();" >Add new word</button>
 </div>
+
+<!-- To toggle add new word button -->
 <button (click) = "isShowForm = true" *ngIf="!isShowForm" >Add new word</button>
 
 <div *ngFor = "let word of arrWords" >
