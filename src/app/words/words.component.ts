@@ -50,6 +50,5 @@ export class WordsComponent implements OnInit {
     const ViewGreen = this.filterStatus === 'ViewGreen' && got;
     const ViewRed = this.filterStatus === 'ViewRed' && !got;
     return ViewAll || ViewGreen || ViewRed;
-
   }
 }
