@@ -10,6 +10,7 @@ export class WordsComponent implements OnInit {
   newEng = '';
   newVn = '';
   isShowForm = false;
+  filterStatus = 'ViewAll'
 
   arrWords = [
     { id: 1, en: 'Hello', vn: 'Xin Chao', got: true},
@@ -41,7 +42,14 @@ export class WordsComponent implements OnInit {
   deleteWord(id: number) {
     const index = this.arrWords.findIndex( word => word.id === id);
     this.arrWords.splice(index, 1);
-
   }
 
+  // Show status option button
+  getShowStatus(got: boolean) {
+    const ViewAll = this.filterStatus === 'ViewAll';
+    const ViewGreen = this.filterStatus === 'ViewGreen' && got;
+    const ViewRed = this.filterStatus === 'ViewRed' && !got;
+    return ViewAll || ViewGreen || ViewRed;
+
+  }
 }

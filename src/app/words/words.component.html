@@ -7,11 +7,21 @@
 
 <!-- To toggle add new word button -->
 <button (click) = "isShowForm = true" *ngIf="!isShowForm" >Add new word</button>
+<br/><br/>
 
-<div *ngFor = "let word of arrWords" class="myWord" >
-  <h4 [ngStyle] = "{ color: word.got ? 'green' : 'red' }">
-      {{ word.en }}
-  </h4>
-  <p>{{ word.vn }}</p><br />
-  <button (click)="deleteWord(word.id)">Delete</button>
+<!-- Option -->
+<select [(ngModel)] = "filterStatus">
+  <option value="ViewAll">View all</option>
+  <option value="ViewGreen">View green</option>
+  <option value="ViewRed">View red</option>
+</select>
+
+<div *ngFor = "let word of arrWords" >
+	<div *ngIf="getShowStatus(word.got)" class="myWord">
+		<h4 [ngStyle] = "{ color: word.got ? 'green' : 'red' }">
+			{{ word.en }}
+		</h4>
+		<p>{{ word.vn }}</p><br />
+		<button (click)="deleteWord(word.id)">Delete</button>
+	</div>
 </div>
