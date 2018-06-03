@@ -23,6 +23,7 @@ export class WordsComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Add
   addWord() {
     this.arrWords.unshift({
       id: this.arrWords.length + 1,
@@ -34,6 +35,13 @@ export class WordsComponent implements OnInit {
     this.newEng = '';
     this.newVn = '';
     this.isShowForm = false;
+  }
+
+  // Delete
+  deleteWord(id: number) {
+    const index = this.arrWords.findIndex( word => word.id === id);
+    this.arrWords.splice(index, 1);
+
   }
 
 }
