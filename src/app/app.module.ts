@@ -7,6 +7,7 @@ import { TestComponent } from './test/test.component';
 import { FormComponent } from './form/form.component';
 import { StructComponent } from './struct/struct.component';
 import { WordsComponent } from './words/words.component';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WordsComponent } from './words/words.component';
     TestComponent,
     FormComponent,
     StructComponent,
-    WordsComponent
+    WordsComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
