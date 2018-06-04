@@ -5,7 +5,9 @@ import { Routes, RouterModule } from '@angular/router'; // Routing
 
 const routesConfig: Routes = [
   { path: 'contact', component: ContactComponent },
-  { path: 'detail', component: ContactDetailComponent }
+  { path: 'detail', component: ContactDetailComponent },
+  { path: '', redirectTo: '/contact', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent  }
 ]
 
 import { AppComponent } from './app.component';
@@ -19,6 +21,7 @@ import { ParentComponent } from './parent.component';
 import { ChildComponent } from './child.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
     ParentComponent,
     ChildComponent,
     ContactComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
