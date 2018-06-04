@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { ContactComponent } from './contact/contact.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
@@ -14,7 +15,7 @@ const routesConfig: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routesConfig)],
+  imports: [RouterModule.forRoot(routesConfig), CommonModule ],
   declarations: [
     ContactComponent,
     ContactDetailComponent,
