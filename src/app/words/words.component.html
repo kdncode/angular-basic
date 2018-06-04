@@ -23,5 +23,7 @@
 		</h4>
 		<p>{{ word.vn }}</p><br />
 		<button (click)="deleteWord(word.id)">Delete</button>
+		<button (click)="word.got = !word.got">
+      {{ word.got ? 'Not remembered' : 'Remembered'}}</button>
 	</div>
 </div>
