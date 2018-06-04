@@ -6,27 +6,30 @@
 </ul>
 
 <button (click)="onClick();">Click me</button><br/><br/><br/>
+<button (click)="toggleForm();">Toggle Form</button><br/><br/><br/>
 
-<h1>Edit User</h1>
-<form (submit)="addHobby(hobby.value)">
-    <div>
-      <label>Name </label>
-      <input [(ngModel)]="name" name="name" placeholder="Name">
-    </div>
-    <div>
-        <label>Age </label>
-        <input [(ngModel)]="age" name="age" placeholder="Age">
-    </div>
-    <div>
-        <label>Street </label>
-        <input [(ngModel)]="address.street" name="street" placeholder="Street">
-    </div>
-    <div>
-        <label>City </label>
-        <input [(ngModel)]="address.city" name="city" placeholder="City">
-    </div>
+<div *ngIf='isToggle'>
+  <h1>Edit User</h1>
+  <form (submit)="addHobby(hobby.value)">
+      <div>
+        <label>Name </label>
+        <input [(ngModel)]="name" name="name" placeholder="Name">
+      </div>
+      <div>
+          <label>Age </label>
+          <input [(ngModel)]="age" name="age" placeholder="Age">
+      </div>
+      <div>
+          <label>Street </label>
+          <input [(ngModel)]="address.street" name="street" placeholder="Street">
+      </div>
+      <div>
+          <label>City </label>
+          <input [(ngModel)]="address.city" name="city" placeholder="City">
+      </div>
+  </form>
+</div>
 
-</form>
 
 <h1>Hobbies</h1>
 <form (submit)="addHobby(hobby.value)">

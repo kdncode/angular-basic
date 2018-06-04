@@ -10,6 +10,7 @@ export class UserComponent implements OnInit {
   age: number;
   address: Address;
   hobbies: string[];
+  isToggle: boolean = false;
 
   constructor() {
 
@@ -44,6 +45,12 @@ export class UserComponent implements OnInit {
       }
     }
   }
+
+  toggleForm() {
+    this.isToggle = !this.isToggle;
+  }
+
+
 }
 
 interface Address {
