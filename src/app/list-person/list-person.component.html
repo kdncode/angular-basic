@@ -1,0 +1,4 @@
+<!-- ng-container: to not appear div in inspect html -->
+<ng-container *ngFor="let person of arrPeople">
+  <app-person [name]="person.name" [age]="person.age"></app-person>
+</ng-container>
