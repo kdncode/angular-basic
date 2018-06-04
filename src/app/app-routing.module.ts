@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routesConfig: Routes = [
   { path: 'contact', component: ContactComponent },
-  { path: 'detail', component: ContactDetailComponent },
+  { path: 'detail/:id', component: ContactDetailComponent },
   { path: '', redirectTo: '/contact', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent  }
 ];
