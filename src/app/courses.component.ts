@@ -19,6 +19,13 @@ import { Component } from '@angular/core';
     <!-- 2 ways binding -->
     <input [(ngModel)]="email" (keyUp.enter)="onKeyUp2()" > <br/><br/>
 
+    <!-- Pipe -->
+    {{ sport.name | uppercase | lowercase }} <br />
+    {{ sport.rating | number:'1.1-2' }}<br />
+    {{ sport.player | number }}<br />
+    {{ sport.price | currency: 'USD' }}<br />
+    {{ sport.releaseDate | date:'longDate' }}<br />
+
     <ul *ngFor='let course of courses'>
       <li>{{ course }}</li>
     </ul>
@@ -33,6 +40,14 @@ export class CoursesComponent {
   github= "https://octodex.github.com/images/okal-eltocat.jpg"
   isActive = true;
   email = 'hi@hi.com';
+
+  sport = {
+    name: 'Football',
+    rating: 4.922,
+    player: 2221123,
+    price: 320.12,
+    releaseDate: new Date(1942, 3, 1)
+  }
 
   constructor(coursesService: CoursesService) {
     this.courses = coursesService.getCourses();
