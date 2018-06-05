@@ -11,4 +11,8 @@ export class AppComponent {
     title: 'New Angular now',
     isLock: true
   }
+
+  onLockChange() {
+    console.log('locked changes')
+  }
 }

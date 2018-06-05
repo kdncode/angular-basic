@@ -1,5 +1,7 @@
 <!-- using input -->
-<app-favorite [isLock]="post.isLock"></app-favorite>
+<app-favorite
+  [isLock]="post.isLock"
+  (change)="onLockChange()"></app-favorite>
 <!-- <app-favorite></app-favorite> -->
 
 <!-- <app-courses></app-courses> -->
