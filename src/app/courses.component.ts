@@ -9,9 +9,16 @@ import { Component } from '@angular/core';
     <button [style.backgroundColor]="isActive ? 'green' : 'blue' ">Save</button>
     <button (click)="onClick()">Click Me </button><br/>
 
+    <!-- Event binding -->
     <input (keyUp.enter)="onKeyUp($event)" > <br/><br/>
-    <!-- Template variable -->
+
+    <!-- Template variable
     <input #email (keyup.enter)="onKeyUp1(email.value)" ><br/><br/>
+    -->
+
+    <!-- 2 ways binding -->
+    <input [(ngModel)]="email" (keyUp.enter)="onKeyUp2()" > <br/><br/>
+
     <ul *ngFor='let course of courses'>
       <li>{{ course }}</li>
     </ul>
@@ -25,6 +32,8 @@ export class CoursesComponent {
   courses;
   github= "https://octodex.github.com/images/okal-eltocat.jpg"
   isActive = true;
+  email = 'hi@hi.com';
+
   constructor(coursesService: CoursesService) {
     this.courses = coursesService.getCourses();
   }
@@ -43,6 +52,10 @@ export class CoursesComponent {
 
   onKeyUp1(email) {
     console.log(email);
-
   }
+
+  onKeyUp2() {
+    console.log(this.email);
+  }
+
 }
