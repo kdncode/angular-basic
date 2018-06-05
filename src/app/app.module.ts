@@ -17,6 +17,7 @@ import { UserComponent } from './user/user.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesComponent } from './courses.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { LikeComponent } from './like/like.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     UserComponent,
     CourseComponent,
     CoursesComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

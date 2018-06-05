@@ -1,7 +1,15 @@
+<!-- Using Input for Like -->
+<app-like
+  [likesCount]="tweet.likesCount"
+  [isActive]="tweet.isLiked">
+</app-like>
+
 <!-- using input -->
-<app-favorite
-  [isLock]="post.isLock"
-  (change)="onLockChange()"></app-favorite>
+    <!-- <app-favorite
+      [isLock]="post.isLock"
+      (change)="onLockChange()">
+    </app-favorite> -->
+
 <!-- <app-favorite></app-favorite> -->
 
 <!-- <app-courses></app-courses> -->

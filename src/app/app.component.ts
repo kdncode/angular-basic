@@ -12,6 +12,13 @@ export class AppComponent {
     isLock: true
   }
 
+  tweet = {
+    body: '...',
+    likesCount: 5,
+    isLiked: true
+
+  }
+
   onLockChange() {
     console.log('locked changes')
   }
