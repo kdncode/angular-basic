@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
+
 export class UserComponent implements OnInit {
   name: string;
   age: number;
@@ -49,7 +50,6 @@ export class UserComponent implements OnInit {
   toggleForm() {
     this.isToggle = !this.isToggle;
   }
-
 
 }
 
