@@ -16,6 +16,7 @@ import { ChildComponent } from './child.component';
 import { UserComponent } from './user/user.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesComponent } from './courses.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CoursesComponent } from './courses.component';
     ChildComponent,
     UserComponent,
     CourseComponent,
-    CoursesComponent
+    CoursesComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,

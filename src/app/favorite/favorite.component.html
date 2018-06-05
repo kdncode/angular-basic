@@ -1,0 +1,10 @@
+<span
+  class="oi"
+  [class.oi-lock-locked]="isLock"
+  [class.oi-lock-unlocked]="!isLock"
+  (click)="onClick();"
+  >
+</span><br/>
+
+<input type="text" [(ngModel)]="title">
+<h1>{{ title }}</h1>
