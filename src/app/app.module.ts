@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-
+import { CoursesService } from './courses.service'
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
@@ -14,6 +14,8 @@ import { ListPersonComponent } from './list-person/list-person.component';
 import { ParentComponent } from './parent.component';
 import { ChildComponent } from './child.component';
 import { UserComponent } from './user/user.component';
+import { CourseComponent } from './course/course.component';
+import { CoursesComponent } from './courses.component';
 
 
 @NgModule({
@@ -27,14 +29,18 @@ import { UserComponent } from './user/user.component';
     ListPersonComponent,
     ParentComponent,
     ChildComponent,
-    UserComponent
+    UserComponent,
+    CourseComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CoursesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
