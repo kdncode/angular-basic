@@ -5,6 +5,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.css']
 })
+
 export class FavoriteComponent implements OnInit {
 
   @Input() isLock: boolean;
