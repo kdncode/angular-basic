@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-parent',
   template: `
     <h1>{{ value }}</h1>
-    <app-child (myClick)="changeValue($event);"></app-child>`
+    <app-child (myClick)="changeValue($event);"></app-child>
+  `
 })
 
 export class ParentComponent {
