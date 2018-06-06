@@ -5,6 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './like.component.html',
   styleUrls: ['./like.component.css']
 })
+
 export class LikeComponent {
 
   @Input('likesCount') likesCount: number;
@@ -13,7 +14,6 @@ export class LikeComponent {
   onClick() {
     this.likesCount += (this.isActive) ? -1 : 1;
     this.isActive = !this.isActive;
-
   }
 
 }
